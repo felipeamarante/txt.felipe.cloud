@@ -34,6 +34,7 @@ post = "/blog/:title/"
   mainSections = ["posts"]
   headTitle = "Tech Pills"
   description = "Sharing what made me smarter." 
+  favicon = "/logo.png" 
 
   [[params.meta]]
   favicon = true
