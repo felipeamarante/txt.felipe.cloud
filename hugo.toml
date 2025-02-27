@@ -1,0 +1,49 @@
+baseURL = 'https://txt.felipe.cloud'
+languageCode = 'en-us'
+title = 'Tech Pills'
+theme = "yinyang"
+canonifyURLs = false
+enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    guessSyntax = true
+    noClasses = true
+    style = "bw"
+    tabWidth = 2
+
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English 🇬🇧"
+    weight = 1
+  [languages.pt]
+    contentDir = "content/pt"
+    languageName = "Portuguese 🇧🇷"
+    weight = 2
+
+[permalinks]
+post = "/blog/:title/"
+
+
+[params]
+  mainSections = ["posts"]
+  headTitle = "Tech Pills"
+  description = "Sharing what made me smarter." 
+
+
+[[params.author]]
+    name = "Felipe A."
+    homepage = "https://hello.felipe.cloud"
+
+
+[[params.socials]]
+link = "https://hello.felipe.cloud"
+name = "About"
+
+postHeaderContent = ""
+postFooterContent = ""
