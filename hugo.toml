@@ -35,6 +35,9 @@ post = "/blog/:title/"
   headTitle = "Tech Pills"
   description = "Sharing what made me smarter." 
 
+  [[params.meta]]
+  favicon = true
+
 
 [[params.author]]
     name = "Felipe A."

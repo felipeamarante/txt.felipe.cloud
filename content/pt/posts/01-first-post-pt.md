@@ -8,7 +8,7 @@ tags = [
 ]
 date = "2025-02-27"
 categories = [
-    "leadership",
+    "Leadership",
 ]
 menu = "main"
 +++
