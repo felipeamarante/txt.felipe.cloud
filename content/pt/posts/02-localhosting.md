@@ -1,5 +1,5 @@
 +++
-title = "Localhost"
+title = "Como compartilhar seu localhost"
 author = "Felipe A."
 draft = false
 tags = [

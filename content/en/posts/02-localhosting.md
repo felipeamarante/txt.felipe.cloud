@@ -1,5 +1,5 @@
 +++
-title = "Localhost"
+title = "How to expose your localhost"
 author = "Felipe A."
 draft = false
 tags = [
