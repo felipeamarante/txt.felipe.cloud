@@ -7,7 +7,7 @@ tags = [
 ]
 date = "2025-03-13"
 categories = [
-    "AWS",
+    "K8s",
 ]
 menu = "main"
 +++
