@@ -1,11 +1,11 @@
 +++
-title = " Easy way to handle aws cli multi profile"
+title = "Como dar ctrl+v direto para seu cluster k8s no mac"
 author = "Felipe A."
 draft = false
 tags = [
     "Felipe A.",
 ]
-date = "2025-03-12"
+date = "2025-03-13"
 categories = [
     "AWS",
 ]
