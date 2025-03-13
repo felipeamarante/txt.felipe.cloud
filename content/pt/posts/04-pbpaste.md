@@ -30,14 +30,14 @@ spec:
   containers:
     - name: chaos-container
       image: busybox
-      command: ["sh", "-c", "echo 'Implantando... brincadeira! 🤡' && sleep 3600"]
+      command: ["sh", "-c", "echo 'Implantando... brincadeira!' && sleep 3600"]
       lifecycle:
         postStart:
           exec:
-            command: ["/bin/sh", "-c", "echo 'Contexto configurado corretamente? 🤔'"]
+            command: ["/bin/sh", "-c", "echo 'Contexto configurado corretamente?'"]
         preStop:
           exec:
-            command: ["/bin/sh", "-c", "echo 'Adeus, cluster cruel! 😭'"]
+            command: ["/bin/sh", "-c", "echo 'Adeus, cluster cruel!'"]
   restartPolicy: Never
   nodeSelector:
     coffee-supply: "critical"
