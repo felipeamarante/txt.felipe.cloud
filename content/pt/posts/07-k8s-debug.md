@@ -36,8 +36,6 @@ Experimente este comando mágico para criar um clone com os mesmos volumes, mas 
 kubectl debug failing-pod-xyz -it --copy-to=debug-pod --container=debug-container --image=ubuntu
 ```
 
-![k8s-debug](/images/k8s-debug.png)
-
 ### O kit de ferramentas definitivo para debug
 
 Crie este YAML e mantenha-o sempre à mão:
