@@ -6,7 +6,7 @@ tags = [
     "Felipe A.",
     "smart",
 ]
-date = "2025-02-27"
+date = "2025-01-01"
 categories = [
     "Leadership",
 ]
