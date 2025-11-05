@@ -16,7 +16,7 @@ menu = "main"
 
 ![local ai](/images/local-ai.gif)
 
-We've all been there—hitting rate limits on OpenAI's API, worrying about sensitive code being uploaded to some distant server, or trying to code on a plane with spotty Wi-Fi. What if you could run powerful AI models right on your laptop, completely offline?
+We've all been there: hitting rate limits on OpenAI's API, worrying about sensitive code being uploaded to some distant server, or trying to code on a plane with spotty Wi-Fi. What if you could run powerful AI models right on your laptop, completely offline?
 
 ### Enter Ollama: Local LLMs Made Ridiculously Simple
 
@@ -127,7 +127,7 @@ Running LLMs locally can be resource-intensive, but these tips make a huge diffe
 
 ### The real-world use case
 
-Last week, I was working on a client project with strict security requirements—no code could leave their network. With Ollama running locally, I could still get AI assistance for debugging a complex authentication flow without violating any policies.
+Last week, I was working on a client project with strict security requirements: no code could leave their network. With Ollama running locally, I could still get AI assistance for debugging a complex authentication flow without violating any policies.
 
 The model helped me identify a race condition in the token refresh logic that would have taken hours to find manually. All without sending a single line of code to an external API.
 

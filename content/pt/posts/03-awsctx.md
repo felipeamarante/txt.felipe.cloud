@@ -19,7 +19,7 @@ menu = "main"
 
 ![meme](/images/this-is-fine.gif)
 
-Isso já me aconteceu uma vez—implantei uma stack de produção na conta de sandbox e não fazia ideia do porquê não estava funcionando... Transformando essa experiência frustrante em algo útil, decidi criar uma ferramenta que me ajuda (e potencialmente ajuda você) a definir um perfil ou contexto, semelhante ao [kubectx](https://github.com/ahmetb/kubectx).
+Isso já me aconteceu uma vez: implantei uma stack de produção na conta de sandbox e não fazia ideia do porquê não estava funcionando... Transformando essa experiência frustrante em algo útil, decidi criar uma ferramenta que me ajuda (e potencialmente ajuda você) a definir um perfil ou contexto, semelhante ao [kubectx](https://github.com/ahmetb/kubectx).
 
 É uma função simples de shell que você adiciona ao seu `.bashrc` ou `.zshrc`, e ela carrega sempre que você inicia uma nova sessão de shell. O nome dela é `awsctx` (sim, muito criativo).
 

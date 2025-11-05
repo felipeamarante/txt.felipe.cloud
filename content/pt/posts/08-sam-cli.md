@@ -16,7 +16,7 @@ menu = "main"
 
 ![meme](/images/bbq-sim.gif)
 
-Todos nós já passamos por isso—zipando código manualmente, fazendo upload para S3, configurando triggers, configurando API Gateway... é o suficiente para fazer você questionar se serverless realmente vale a pena. Ou pior, escrevendo centenas de linhas de Terraform só para implantar uma função simples.
+Todos nós já passamos por isso: zipando código manualmente, fazendo upload para S3, configurando triggers, configurando API Gateway... é o suficiente para fazer você questionar se serverless realmente vale a pena. Ou pior, escrevendo centenas de linhas de Terraform só para implantar uma função simples.
 
 ### Conheça o AWS SAM CLI
 
@@ -95,6 +95,6 @@ Isso compila seu código, empacota, cria/atualiza a stack do CloudFormation e te
 sam sync --watch
 ```
 
-Isso observa as alterações nos arquivos e automaticamente sincroniza com a nuvem—sem necessidade de reimplantação completa.
+Isso observa as alterações nos arquivos e automaticamente sincroniza com a nuvem. Sem necessidade de reimplantação completa.
 
 Sem mais desculpas para não usar serverless. O SAM CLI torna tudo quase fácil demais!

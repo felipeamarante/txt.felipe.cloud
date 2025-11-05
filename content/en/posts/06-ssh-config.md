@@ -16,7 +16,7 @@ menu = "main"
 
 ![meme](/images/typing-furiously.gif)
 
-We've all been there—typing out the same SSH commands over and over:
+We've all been there: typing out the same SSH commands over and over:
 
 ```bash
 ssh -i ~/.ssh/special_key.pem user@ec2-54-234-56-78.compute-1.amazonaws.com

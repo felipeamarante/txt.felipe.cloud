@@ -22,7 +22,7 @@ As a consultant, I've witnessed this scenario play out repeatedly: a project fal
 
 ### The Enduring Wisdom of Brooks' Law
 
-The core insight of Brooks' work is that software development—and by extension, complex consulting projects—doesn't scale linearly with the number of people involved. When a project is behind schedule, our instinct to throw more bodies at the problem often backfires spectacularly.
+The core insight of Brooks' work is that software development, and by extension complex consulting projects, doesn't scale linearly with the number of people involved. When a project is behind schedule, our instinct to throw more bodies at the problem often backfires spectacularly.
 
 There are several reasons why this happens:
 
@@ -63,7 +63,7 @@ On that troubled ERP project I mentioned earlier, we eventually:
 2. Clarified decision-making authority
 3. Implemented a more focused scope
 
-The result? The project was delivered within four months—faster than the projected timeline with the larger team.
+The result? The project was delivered within four months, faster than the projected timeline with the larger team.
 
 ### The Timeless Truth
 

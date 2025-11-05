@@ -350,7 +350,7 @@ Mas em 2025, estes padrões emergiram:
 - **EKS é a melhor escolha padrão** para equipes com expertise existente em Kubernetes ou requisitos multi-cloud
 - **Ambos os serviços estão prontos para produção** e podem escalar para atender necessidades empresariais
 
-A boa notícia é que ambos os serviços continuam melhorando rapidamente, então nenhuma escolha está errada—são apenas diferentes trade-offs para diferentes contextos.
+A boa notícia é que ambos os serviços continuam melhorando rapidamente, então nenhuma escolha está errada. São apenas diferentes trade-offs para diferentes contextos.
 
 ### Junte-se a mim no AWS Community Day Lisboa 2025
 

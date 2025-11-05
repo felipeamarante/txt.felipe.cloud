@@ -16,15 +16,15 @@ menu = "main"
 
 My mom asked me this question during our weekly video call. Living thousands of kilometers apart means these calls are our main connection, and they often turn into impromptu tech support sessions. She'd been using ChatGPT to help write emails and was genuinely curious about what was happening behind the scenes.
 
-As I started explaining neural networks and transformers, I could see her eyes glazing over through the pixelated FaceTime screen. So I tried again, this time with analogies she could relate to. Here's how I explained LLMs to my mom—and how you can explain them to yours.
+As I started explaining neural networks and transformers, I could see her eyes glazing over through the pixelated FaceTime screen. So I tried again, this time with analogies she could relate to. Here's how I explained LLMs to my mom, and how you can explain them to yours.
 
 ### The Library Analogy: How LLMs Learn
 
-"Mom, imagine someone who has read every book in the world's largest library—billions of books, articles, websites, and conversations.
+"Mom, imagine someone who has read every book in the world's largest library: billions of books, articles, websites, and conversations.
 
 This person hasn't memorized every word, but they've developed an incredible sense of how language works and which words tend to follow others in different contexts.
 
-That's basically what an LLM is—it's read most of the text on the internet and learned patterns about how language works."
+That's basically what an LLM is. It's read most of the text on the internet and learned patterns about how language works."
 
 ### The Word Prediction Game
 
@@ -43,17 +43,17 @@ Mom: "Milk? Bread? Groceries?"
 
 My mom loves cooking, so this analogy clicked even through the distance:
 
-"A traditional computer program is like following a recipe exactly. If the recipe says 'add 500 grams of flour,' that's what it does—no more, no less.
+"A traditional computer program is like following a recipe exactly. If the recipe says 'add 500 grams of flour,' that's what it does: no more, no less.
 
-But an LLM is more like an experienced chef who's studied thousands of recipes. This chef doesn't follow exact instructions—instead, they've developed an intuition about cooking. If you ask them to make a pasta dish with the ingredients in your fridge, they can improvise something that makes sense, even if they've never made that exact dish before."
+But an LLM is more like an experienced chef who's studied thousands of recipes. This chef doesn't follow exact instructions. Instead, they've developed an intuition about cooking. If you ask them to make a pasta dish with the ingredients in your fridge, they can improvise something that makes sense, even if they've never made that exact dish before."
 
 ### How It Actually Works: The 5-Minute Version
 
 When she asked for a bit more detail, I shared my screen and drew a simple diagram as I broke it down into five steps:
 
-1. **Training Data**: "First, they feed the AI system with massive amounts of text—like books, articles, websites, and more."
+1. **Training Data**: "First, they feed the AI system with massive amounts of text: books, articles, websites, and more."
 
-2. **Tokenization**: "The AI breaks all this text into small pieces called 'tokens'—which are words or parts of words."
+2. **Tokenization**: "The AI breaks all this text into small pieces called 'tokens', which are words or parts of words."
 
 3. **Pattern Learning**: "Using a special type of math (I spared her the details of matrix multiplication and backpropagation), the AI learns which words tend to follow others in different contexts."
 
@@ -65,7 +65,7 @@ When she asked for a bit more detail, I shared my screen and drew a simple diagr
 
 My mom then asked the million-dollar question through her slightly laggy FaceTime connection: "But does it actually understand what it's saying?"
 
-"That's the big debate," I told her. "It's like a super-advanced parrot that's incredibly good at mimicking human language patterns. It doesn't 'understand' in the way humans do—it has no experiences, emotions, or consciousness.
+"That's the big debate," I told her. "It's like a super-advanced parrot that's incredibly good at mimicking human language patterns. It doesn't 'understand' in the way humans do. It has no experiences, emotions, or consciousness.
 
 But it's so good at predicting language patterns that it can fake understanding very convincingly. It's like how a mirror reflects your image without actually 'seeing' you."
 
@@ -75,7 +75,7 @@ This led to her next question: "Why does it sometimes make up facts? It told me 
 
 "Remember how I said it's predicting the next word? Well, sometimes the most likely next word leads to something that sounds plausible but isn't true.
 
-It's like if I asked you to continue a story about Abraham Lincoln, you might say he lived in the White House—which is true—but you might also add details that sound right but aren't historically accurate."
+It's like if I asked you to continue a story about Abraham Lincoln, you might say he lived in the White House, which is true, but you might also add details that sound right but aren't historically accurate."
 
 ### The Size Matters: Why Bigger Models Are Smarter
 
@@ -83,13 +83,13 @@ To explain why some AI models are better than others, I used a comparison she co
 
 "The bigger models have read more books and have more connections between concepts. GPT-4 has hundreds of billions of these connections, while smaller models might only have a few billion.
 
-It's like comparing someone who's read 10,000 books to someone who's read 100 books—the first person will generally give you more nuanced and accurate information."
+It's like comparing someone who's read 10,000 books to someone who's read 100 books. The first person will generally give you more nuanced and accurate information."
 
 ### The Surprising Truth About AI "Training"
 
 My mom assumed AI models were constantly learning from our conversations, so I had to correct her:
 
-"Most LLMs like ChatGPT are actually frozen after their initial training. They don't learn from your conversations with them. It's like they read billions of books, then took a final exam—and now they're just using what they learned during that study period to answer questions.
+"Most LLMs like ChatGPT are actually frozen after their initial training. They don't learn from your conversations with them. It's like they read billions of books, then took a final exam, and now they're just using what they learned during that study period to answer questions.
 
 Some newer systems do have memory or can search the web for updated information, but the core model itself isn't usually learning from you."
 
@@ -97,9 +97,9 @@ Some newer systems do have memory or can search the web for updated information,
 
 As our call was wrapping up (her cat demanding attention in the background), I explained why understanding the basics of LLMs is important:
 
-"These systems are increasingly making decisions that affect our lives—from what news we see to helping doctors diagnose diseases. Understanding their limitations helps us use them responsibly.
+"These systems are increasingly making decisions that affect our lives, from what news we see to helping doctors diagnose diseases. Understanding their limitations helps us use them responsibly.
 
-They're incredibly powerful tools, but they're still just tools—like very advanced calculators for language rather than numbers."
+They're incredibly powerful tools, but they're still just tools, like very advanced calculators for language rather than numbers."
 
 ### Mom's Verdict
 

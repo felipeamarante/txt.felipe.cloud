@@ -350,7 +350,7 @@ But in 2025, these patterns have emerged:
 - **EKS is the better default choice** for teams with existing Kubernetes expertise or multi-cloud requirements
 - **Both services are production-ready** and can scale to meet enterprise needs
 
-The good news is that both services continue to improve rapidly, so neither choice is wrong—just different trade-offs for different contexts.
+The good news is that both services continue to improve rapidly, so neither choice is wrong. Just different trade-offs for different contexts.
 
 ### Join me at AWS Community Day Lisbon 2025
 

@@ -16,7 +16,7 @@ menu = "main"
 
 ![meme](/images/lost-in-code.png)
 
-Todos nós já passamos por isso—tentando descobrir o que aconteceu em um projeto olhando fixamente para a saída padrão do `git log`. É como tentar ler um romance escrito em papel de recibo.
+Todos nós já passamos por isso: tentando descobrir o que aconteceu em um projeto olhando fixamente para a saída padrão do `git log`. É como tentar ler um romance escrito em papel de recibo.
 
 Depois de anos franzindo os olhos para hashes de commits e carimbos de data/hora, finalmente encontrei a solução que mudou tudo.
 

@@ -15,13 +15,13 @@ menu = "main"
 ### Still managing VMs like it's 2010?
 
 
-We've all been there—provisioning a new VM for each application, waiting 10+ minutes for it to boot, then spending hours configuring the OS, installing dependencies, and troubleshooting conflicts. And don't get me started on patching and maintenance.
+We've all been there: provisioning a new VM for each application, waiting 10+ minutes for it to boot, then spending hours configuring the OS, installing dependencies, and troubleshooting conflicts. And don't get me started on patching and maintenance.
 
 ### The Engineer-to-Resource Ratio Revolution
 
 Here's a stat that should make you rethink your infrastructure: while a typical operations engineer can manage around 100-200 virtual machines, that same engineer can handle 10,000+ containers.
 
-That's not a typo—it's a 50-100x efficiency improvement.
+That's not a typo: it's a 50-100x efficiency improvement.
 
 ```
 # Traditional VM world
@@ -93,7 +93,7 @@ Infrastructure: $15,000/month (57% savings)
 Personnel: 2 engineers = $300,000/year (60% savings)
 ```
 
-That's over $600,000 in annual savings—before accounting for the business value of faster deployments.
+That's over $600,000 in annual savings, before accounting for the business value of faster deployments.
 
 ### Making the transition: Start small, think big
 
@@ -116,7 +116,7 @@ The good news? You don't need to containerize everything overnight. Start with t
 
 ### The hidden benefit: Better security
 
-Containers don't just improve efficiency—they can dramatically improve your security posture:
+Containers don't just improve efficiency. They can dramatically improve your security posture:
 
 - Immutable infrastructure eliminates configuration drift
 - Smaller attack surface with minimal OS components
@@ -131,4 +131,4 @@ With containers, you get:
 - Better security through immutability
 - Massive cost savings on both infrastructure and personnel
 
-The question isn't whether you should containerize—it's why haven't you started already?
+The question isn't whether you should containerize. It's why haven't you started already?

@@ -16,7 +16,7 @@ menu = "main"
 
 ![meme](/images/bbq-sim.gif)
 
-We've all been there—manually zipping code, uploading to S3, configuring triggers, setting up API Gateway... it's enough to make you question if serverless is actually worth it. Or worse, writing hundreds of lines of Terraform just to deploy a simple function.
+We've all been there: manually zipping code, uploading to S3, configuring triggers, setting up API Gateway... it's enough to make you question if serverless is actually worth it. Or worse, writing hundreds of lines of Terraform just to deploy a simple function.
 
 ### Enter AWS SAM CLI
 
@@ -95,6 +95,6 @@ This builds your code, packages it, creates/updates the CloudFormation stack, an
 sam sync --watch
 ```
 
-This watches for file changes and automatically syncs them to the cloud—no full redeployment needed.
+This watches for file changes and automatically syncs them to the cloud. No full redeployment needed.
 
 No more excuses for not going serverless. SAM CLI makes it almost too easy!

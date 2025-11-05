@@ -15,13 +15,13 @@ menu = "main"
 ### Ainda gerenciando VMs como se estivéssemos em 2010?
 
 
-Todos já passamos por isso—provisionando uma nova VM para cada aplicação, esperando mais de 10 minutos para inicializar, depois gastando horas configurando o sistema operacional, instalando dependências e solucionando conflitos. E nem me faça começar a falar sobre patches e manutenção.
+Todos já passamos por isso: provisionando uma nova VM para cada aplicação, esperando mais de 10 minutos para inicializar, depois gastando horas configurando o sistema operacional, instalando dependências e solucionando conflitos. E nem me faça começar a falar sobre patches e manutenção.
 
 ### A Revolução na Proporção Engenheiro-Recurso
 
 Aqui está uma estatística que deveria fazer você repensar sua infraestrutura: enquanto um engenheiro de operações típico consegue gerenciar cerca de 100-200 máquinas virtuais, esse mesmo engenheiro pode lidar com mais de 10.000 contêineres.
 
-Isso não é um erro de digitação—é uma melhoria de eficiência de 50-100x.
+Isso não é um erro de digitação: é uma melhoria de eficiência de 50-100x.
 
 ```
 # Mundo tradicional de VMs
@@ -93,7 +93,7 @@ Infraestrutura: R$75.000/mês (57% de economia)
 Pessoal: 2 engenheiros = R$360.000/ano (60% de economia)
 ```
 
-Isso representa mais de R$720.000 em economia anual—antes de contabilizar o valor comercial de implantações mais rápidas.
+Isso representa mais de R$720.000 em economia anual, antes de contabilizar o valor comercial de implantações mais rápidas.
 
 ### Fazendo a transição: Comece pequeno, pense grande
 
@@ -116,7 +116,7 @@ A boa notícia? Você não precisa containerizar tudo de uma vez. Comece com est
 
 ### O benefício oculto: Melhor segurança
 
-Contêineres não apenas melhoram a eficiência—eles podem melhorar drasticamente sua postura de segurança:
+Contêineres não apenas melhoram a eficiência. Eles podem melhorar drasticamente sua postura de segurança:
 
 - Infraestrutura imutável elimina desvios de configuração
 - Superfície de ataque menor com componentes mínimos de SO
@@ -131,4 +131,4 @@ Com contêineres, você obtém:
 - Melhor segurança através da imutabilidade
 - Economia massiva de custos tanto em infraestrutura quanto em pessoal
 
-A questão não é se você deve containerizar—é por que você ainda não começou?
+A questão não é se você deve containerizar. É por que você ainda não começou?

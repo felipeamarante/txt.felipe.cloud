@@ -22,7 +22,7 @@ Como consultor, testemunhei este cenário repetidamente: um projeto está atrasa
 
 ### A Sabedoria Duradoura da Lei de Brooks
 
-O insight central do trabalho de Brooks é que o desenvolvimento de software—e, por extensão, projetos complexos de consultoria—não escala linearmente com o número de pessoas envolvidas. Quando um projeto está atrasado, nosso instinto de jogar mais pessoas no problema frequentemente se volta contra nós de maneira espetacular.
+O insight central do trabalho de Brooks é que o desenvolvimento de software, e por extensão projetos complexos de consultoria, não escala linearmente com o número de pessoas envolvidas. Quando um projeto está atrasado, nosso instinto de jogar mais pessoas no problema frequentemente se volta contra nós de maneira espetacular.
 
 Existem várias razões para isso acontecer:
 
@@ -63,7 +63,7 @@ Naquele projeto problemático de ERP que mencionei anteriormente, eventualmente:
 2. Esclarecemos a autoridade de tomada de decisão
 3. Implementamos um escopo mais focado
 
-O resultado? O projeto foi entregue em quatro meses—mais rápido do que o cronograma projetado com a equipe maior.
+O resultado? O projeto foi entregue em quatro meses, mais rápido do que o cronograma projetado com a equipe maior.
 
 ### A Verdade Atemporal
 

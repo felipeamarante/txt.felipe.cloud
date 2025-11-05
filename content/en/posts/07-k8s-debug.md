@@ -16,7 +16,7 @@ menu = "main"
 
 ![meme](/images/evergreen.gif)
 
-We've all been there—looking at a failing pod with no idea why it's not starting. The logs are empty, and you're about to lose your mind.
+We've all been there: looking at a failing pod with no idea why it's not starting. The logs are empty, and you're about to lose your mind.
 
 ### Enter the ephemeral debug container
 
