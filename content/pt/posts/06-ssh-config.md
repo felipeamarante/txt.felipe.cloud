@@ -22,7 +22,7 @@ Todos nós já passamos por isso: digitando os mesmos comandos SSH repetidamente
 ssh -i ~/.ssh/special_key.pem user@ec2-54-234-56-78.compute-1.amazonaws.com
 ```
 
-### Conheça o mágico arquivo ~/.ssh/config
+### O arquivo ~/.ssh/config
 
 ```
 # ~/.ssh/config
@@ -45,10 +45,10 @@ ssh bastion
 ssh prod-db
 ```
 
-### Por que isso muda tudo:
+### O que você ganha:
 
-- **Aliases legíveis** em vez de endereços IP
-- **Seleção automática de chaves** sem a flag -i
-- **Hosts de salto** configurados uma vez, usados para sempre
+- Aliases legíveis em vez de endereços IP
+- Seleção automática de chaves sem a flag -i
+- Hosts de salto configurados uma vez, usados para sempre
 
-Seu futuro eu vai agradecer por ter dedicado 5 minutos para configurar isso hoje!
+São 5 minutos de configuração. Faz logo.

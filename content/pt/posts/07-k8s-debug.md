@@ -18,25 +18,25 @@ menu = "main"
 
 Todos nós já passamos por isso: olhando para um pod falhando sem ter ideia do porquê ele não está iniciando. Os logs estão vazios e você está quase perdendo a cabeça.
 
-### Conheça o container de debug efêmero
+### Container de debug efêmero
 
-O Kubernetes 1.23+ tem um recurso que vai mudar sua vida de debugging para sempre:
+O Kubernetes 1.23+ tem um recurso bem útil pra isso:
 
 ```bash
 kubectl debug -it failing-pod-xyz --image=busybox --target=failing-container
 ```
 
-Isso anexa um container de debug ao seu pod existente sem reiniciá-lo! Agora você pode inspecionar o sistema de arquivos, verificar variáveis de ambiente e ver o que está realmente acontecendo.
+Isso anexa um container de debug ao seu pod existente sem reiniciá-lo. Você consegue inspecionar o sistema de arquivos, checar variáveis de ambiente e rodar comandos dentro do contexto do container.
 
 ### Mas e se o pod nem sequer iniciar?
 
-Experimente este comando mágico para criar um clone com os mesmos volumes, mas uma imagem diferente:
+Esse comando cria um clone com os mesmos volumes, mas com uma imagem diferente:
 
 ```bash
 kubectl debug failing-pod-xyz -it --copy-to=debug-pod --container=debug-container --image=ubuntu
 ```
 
-### O kit de ferramentas definitivo para debug
+### Kit de ferramentas de debug
 
 Crie este YAML e mantenha-o sempre à mão:
 
@@ -60,7 +60,7 @@ Aplique com:
 pbpaste | kubectl apply -f-
 ```
 
-Agora você tem um pod com todas as ferramentas de rede e debugging imagináveis que pode rodar em qualquer nó.
+Com isso você tem um pod com ferramentas de rede e debugging que roda em qualquer nó.
 
 ### Dica pro: Use o plugin kubectl-debug
 
@@ -69,4 +69,4 @@ kubectl krew install debug
 kubectl debug pod failing-pod-xyz
 ```
 
-Chega de adivinhar o que está acontecendo dentro dos seus pods!
+Com isso você já tem o que precisa pra parar de adivinhar.

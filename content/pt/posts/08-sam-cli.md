@@ -20,7 +20,7 @@ Todos nós já passamos por isso: zipando código manualmente, fazendo upload pa
 
 ### Conheça o AWS SAM CLI
 
-AWS Serverless Application Model (SAM) CLI é a ferramenta que vai fazer você se apaixonar novamente pelo desenvolvimento serverless. É como um Docker Compose para funções Lambda.
+AWS Serverless Application Model (SAM) CLI resolve boa parte desse pesadelo. É como um Docker Compose para funções Lambda.
 
 ```bash
 # Instalação
@@ -95,6 +95,4 @@ Isso compila seu código, empacota, cria/atualiza a stack do CloudFormation e te
 sam sync --watch
 ```
 
-Isso observa as alterações nos arquivos e automaticamente sincroniza com a nuvem. Sem necessidade de reimplantação completa.
-
-Sem mais desculpas para não usar serverless. O SAM CLI torna tudo quase fácil demais!
+Fica monitorando as alterações nos arquivos e sincroniza com a nuvem automaticamente, sem precisar reimplantar tudo do zero. Na prática, você altera o código e em alguns segundos já tá rodando na AWS.

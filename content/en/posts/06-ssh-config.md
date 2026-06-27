@@ -22,7 +22,7 @@ We've all been there: typing out the same SSH commands over and over:
 ssh -i ~/.ssh/special_key.pem user@ec2-54-234-56-78.compute-1.amazonaws.com
 ```
 
-### Enter the magical ~/.ssh/config file
+### The ~/.ssh/config file
 
 ```
 # ~/.ssh/config
@@ -37,7 +37,7 @@ Host prod-db
     ProxyJump bastion
 ```
 
-Now you can simply type:
+Now you can type:
 
 ```bash
 ssh bastion
@@ -45,10 +45,4 @@ ssh bastion
 ssh prod-db
 ```
 
-### Why this is life-changing:
-
-- **Human-readable aliases** instead of IP addresses
-- **Automatic key selection** without the -i flag
-- **Jump hosts** configured once, used forever
-
-Your future self will thank you for taking 5 minutes to set this up today!
+You get readable aliases instead of raw IPs, key selection without the `-i` flag, and jump hosts that stay configured. Five minutes to set up, and you never type that garbage again.

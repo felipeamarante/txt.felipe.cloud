@@ -22,11 +22,11 @@ Então vi que o [Ngrok lançou um operador](https://github.com/ngrok/ngrok-opera
 
 ![ngrok](/images/localhost02.png)
 
-É bem simples de usar, passos são,
+O processo é bem direto:
  1. Crie uma [conta gratuita no Ngrok](https://dashboard.ngrok.com/signup)
  1. [Instale o operador](https://ngrok.com/docs/getting-started/kubernetes/?k8s-install=ingress#step-1-install-kubernetes-operator)
  1. Implemente o que quiser expor - Exemplo, [Podinfo](https://github.com/stefanprodan/podinfo)
- 1. Crie um ingress como o exemplo abaixo, apenas substitua o host pelo seu Ngrok **Nome de Domínio Completo**
+ 1. Crie um ingress como o exemplo abaixo, apenas substitua o host pelo seu Ngrok Nome de Domínio Completo
 
  ```yaml
  apiVersion: networking.k8s.io/v1
@@ -48,7 +48,7 @@ spec:
                   number: 80
 ```
 
-Espere alguns segundos e você deverá obter a URL ao descrever o ingress que acabou de criar
+Espere alguns segundos e rode isso para ver a URL do ingress:
 
 ```bash
 kubectl get ing -A

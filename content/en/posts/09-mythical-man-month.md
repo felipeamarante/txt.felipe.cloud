@@ -12,61 +12,56 @@ categories = [
 menu = "main"
 +++
 
-### Why Adding More People to a Late Project Makes It Later
+### Why adding more people to a late project makes it later
 
 ![mythical man month](/images/jake.gif)
 
-"Adding manpower to a late software project makes it later." This counterintuitive statement, known as Brooks' Law, comes from Fred Brooks' seminal book "The Mythical Man Month," published in 1975. Despite being nearly 50 years old, this principle remains painfully relevant in today's consulting projects.
+"Adding manpower to a late software project makes it later." Brooks' Law, from Fred Brooks' 1975 book "The Mythical Man Month." The book is nearly 50 years old and still describes exactly what I watch happen on consulting projects.
 
-As a consultant, I've witnessed this scenario play out repeatedly: a project falls behind schedule, and the immediate reaction is to add more people to "catch up." What follows is almost always a disaster.
+As a consultant, I've seen this play out more times than I can count. A project falls behind, the client panics, and someone decides the solution is more people. What follows is almost always a mess.
 
-### The Enduring Wisdom of Brooks' Law
+### Brooks' Law, briefly
 
-The core insight of Brooks' work is that software development, and by extension complex consulting projects, doesn't scale linearly with the number of people involved. When a project is behind schedule, our instinct to throw more bodies at the problem often backfires spectacularly.
+Software development doesn't scale with headcount. Neither do most complex consulting projects. When things go sideways, our instinct is to throw more bodies at the problem. That instinct is usually wrong.
 
-There are several reasons why this happens:
+A few reasons why:
 
-- New team members require time to understand the project, its codebase, and business context
-- Existing team members must divert attention to onboard newcomers, reducing their productivity
-- Communication overhead grows exponentially as team size increases (with n people, potential communication channels = n(n-1)/2)
-- Some tasks are inherently sequential and cannot be parallelized ("nine women can't make a baby in one month")
+- New team members need time to understand the project, the codebase, and the business context
+- Existing members have to stop doing actual work to onboard them
+- Communication overhead grows fast as teams get bigger (with n people, potential communication channels = n(n-1)/2)
+- Some tasks are just sequential. You can't get a baby in one month with nine women.
 
-### The Consulting Context: A Perfect Storm
+### The consulting version of this
 
-In consulting environments, these challenges become even more pronounced. I once joined a troubled ERP implementation that had ballooned from an initial team of seven consultants to over twenty. The project was six months behind schedule and hemorrhaging money. The client's response? Add more consultants.
+These problems get worse in consulting. I once joined an ERP implementation that had grown from seven consultants to over twenty. Six months behind, burning money. The client's answer was to add more consultants.
 
-By the time I arrived, team meetings required a conference room designed for forty people, and simple decisions took weeks to finalize as they bounced between various specialists and workstreams.
+By the time I arrived, basic decisions were bouncing between specialists and workstreams for weeks. Team meetings needed a room for forty people.
 
-What makes consulting particularly vulnerable to the Mythical Man Month trap:
+What makes consulting particularly prone to this:
 
-- Client expectations that equate headcount with value and progress
-- Fixed deadlines with contractual penalties looming over every decision
-- Knowledge silos concentrated in a few key individuals
-- Billing pressure that requires justification for high consultant costs
+- Clients often equate headcount with progress
+- Fixed deadlines with contractual penalties push everyone toward visible action
+- Knowledge ends up concentrated in a few people, so newcomers can't really help
+- High billing rates require constant justification
 
-### A More Effective Approach
+### What actually works
 
-Rather than reflexively adding more people when projects fall behind, effective consulting leaders should consider alternative approaches:
+When a project is late, more people is usually the wrong answer.
 
-**Ruthlessly prioritize scope**. Focus on what truly matters for initial delivery and defer less critical elements to later phases. This builds client confidence while creating breathing room for addressing remaining requirements.
+Cutting scope is often the most effective thing you can do. Figure out what has to ship and push everything else to a later phase. That alone can buy enough breathing room to get back on track while still delivering something the client can trust.
 
-**Improve processes before adding people**. On a recent cloud migration project, we discovered that environment provisioning was creating a massive bottleneck. Rather than adding six more engineers as the client requested, we brought in one DevOps specialist who automated the infrastructure deployment process. This single intervention unblocked the entire team and accelerated delivery more effectively than a team expansion would have.
+Before adding resources, find the bottleneck. On a cloud migration project, environment provisioning was grinding the whole team to a halt. The client wanted six more engineers. We brought in one DevOps person who automated the provisioning process. Unblocked the entire team in days.
 
-**Add specialists strategically**. When additional resources are truly necessary, bring in experts for specific problems rather than general resources. Consider creating focused "SWAT teams" that can tackle targeted issues without disrupting the core team's momentum.
+If you do add people, add them for a specific problem. A focused SWAT team that knows exactly what it's there to fix is much less disruptive than five generalists who need a month to ramp up.
 
-### Managing Client Expectations
+### Talking to clients about it
 
-Perhaps the most crucial skill for consulting leaders is managing client expectations around Brooks' Law. This requires transparent communication about the realities of team scaling and presenting data-driven alternatives to simply adding headcount.
+This is the hard part. Clients see more people as progress. Explaining why you want to reduce the team takes real effort.
 
-On that troubled ERP project I mentioned earlier, we eventually:
-1. Reduced the team to twelve key members
-2. Clarified decision-making authority
-3. Implemented a more focused scope
+On that ERP project, we eventually cut the team to twelve, clarified who could make which decisions, and tightened the scope. The project shipped in four months, faster than the projected timeline with the larger team.
 
-The result? The project was delivered within four months, faster than the projected timeline with the larger team.
+### One last thing
 
-### The Timeless Truth
+"The bearing of a child takes nine months, no matter how many women are assigned." Brooks wrote that in 1975.
 
-"The bearing of a child takes nine months, no matter how many women are assigned." This memorable quote from Brooks captures an essential truth: some things simply take time. In consulting, as in software development, the best leaders understand this reality and focus on working smarter rather than just throwing more bodies at the problem.
-
-The next time you face a project falling behind schedule, resist the temptation to immediately expand the team. Instead, remember Brooks' wisdom and look for the strategic interventions that will truly accelerate delivery. Your clients, your team, and your project outcomes will all benefit from this more thoughtful approach.
+Some things just take time. The best move is usually to find the one or two changes that actually unblock people, rather than filling the room with more of them.

@@ -20,7 +20,7 @@ We've all been there: manually zipping code, uploading to S3, configuring trigge
 
 ### Enter AWS SAM CLI
 
-AWS Serverless Application Model (SAM) CLI is the tool that will make you fall in love with serverless development again. It's like Docker Compose for Lambda functions.
+AWS Serverless Application Model (SAM) CLI cuts through all of that. Think of it as Docker Compose for Lambda functions.
 
 ```bash
 # Install it
@@ -49,7 +49,7 @@ my-app/
 └── tests/
 ```
 
-The magic is in `template.yaml`, which defines your entire application:
+`template.yaml` is where your entire application lives:
 
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
@@ -87,7 +87,7 @@ sam local start-api
 sam deploy --guided
 ```
 
-This builds your code, packages it, creates/updates the CloudFormation stack, and gives you an API endpoint. All from one command!
+One command builds your code, packages it, creates or updates the CloudFormation stack, and hands you an API endpoint.
 
 ### Pro tip: Use SAM Accelerate for faster iterations
 
@@ -95,6 +95,4 @@ This builds your code, packages it, creates/updates the CloudFormation stack, an
 sam sync --watch
 ```
 
-This watches for file changes and automatically syncs them to the cloud. No full redeployment needed.
-
-No more excuses for not going serverless. SAM CLI makes it almost too easy!
+This watches for file changes and syncs them to the cloud automatically. No full redeployment needed.

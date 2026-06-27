@@ -18,7 +18,7 @@ menu = "main"
 
 We've all been there: hitting rate limits on OpenAI's API, worrying about sensitive code being uploaded to some distant server, or trying to code on a plane with spotty Wi-Fi. What if you could run powerful AI models right on your laptop, completely offline?
 
-### Enter Ollama: Local LLMs Made Ridiculously Simple
+### Enter Ollama: local LLMs, no cloud required
 
 Ollama lets you run large language models locally with minimal setup. No cloud accounts, no API keys, no usage limits.
 
@@ -40,7 +40,7 @@ ollama pull llama2
 ollama run llama2
 ```
 
-That's it. You're now running a powerful LLM completely offline.
+That's it. You're now running an LLM completely offline.
 
 ### Choose the right model for your needs
 
@@ -62,11 +62,11 @@ ollama pull tinyllama
 
 ### Integrate with your workflow
 
-The real magic happens when you integrate Ollama into your development tools:
+Things get more interesting once you wire Ollama into your existing tools:
 
-**VS Code**: Install "Continue" extension and point it to your local Ollama endpoint.
+For VS Code, install the "Continue" extension and point it to your local Ollama endpoint.
 
-**Terminal**: Create this simple shell function:
+For the terminal, add this function:
 
 ```bash
 function ask() {
@@ -82,7 +82,7 @@ Now you can just type:
 ask "Write a bash function to find the largest files in a directory"
 ```
 
-**Git hooks**: Create a pre-commit hook that uses Ollama to review your code changes:
+For pre-commit hooks, drop this into `.git/hooks/pre-commit`:
 
 ```bash
 #!/bin/bash
@@ -105,21 +105,21 @@ done
 
 ### Performance tips that actually work
 
-Running LLMs locally can be resource-intensive, but these tips make a huge difference:
+Running LLMs locally eats RAM and CPU, but a few adjustments help:
 
-1. **Quantized models**: Use 4-bit quantized versions for 2-3x speedup
+1. Quantized models: use 4-bit quantized versions for a 2-3x speedup.
    ```bash
    ollama pull codellama:7b-q4_0
    ```
 
-2. **Adjust context window**: Smaller context = faster responses
+2. Context window: smaller context means faster responses.
    ```bash
    ollama run llama2 --context 2048
    ```
 
-3. **GPU acceleration**: If you have a decent NVIDIA/AMD GPU, Ollama uses it automatically
+3. GPU acceleration: if you have a decent NVIDIA/AMD GPU, Ollama uses it automatically.
 
-4. **Prune unused models**: They take up significant disk space
+4. Prune unused models: they pile up on disk fast.
    ```bash
    ollama list
    ollama rm unused-model
@@ -131,7 +131,7 @@ Last week, I was working on a client project with strict security requirements: 
 
 The model helped me identify a race condition in the token refresh logic that would have taken hours to find manually. All without sending a single line of code to an external API.
 
-### Beyond the basics: Create your own custom models
+### Beyond the basics: custom models
 
 The most powerful feature is creating custom models tailored to your needs:
 
@@ -151,14 +151,8 @@ ollama create aws-assistant -f Modelfile
 ollama run aws-assistant
 ```
 
-Now you have an AI assistant specialized in AWS, running completely offline.
+Now you have an AWS-focused assistant running entirely on your machine.
 
-### No more excuses for not using AI in your workflow
+### Worth trying
 
-With Ollama, you get:
-- Complete privacy
-- No API costs
-- Offline access
-- Customizable models
-
-The best part? It's all open source. Give it a try and let me know how it transforms your development workflow!
+It's free, open source, and takes about five minutes to set up. If you've been putting it off because it sounded complicated, it really isn't.

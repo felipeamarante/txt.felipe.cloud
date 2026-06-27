@@ -15,7 +15,6 @@ menu = "main"
 
 
 
-
 ### Hey, take a look at my website..
 
 
@@ -32,7 +31,7 @@ Then I saw that [Ngrok launched an operator](https://github.com/ngrok/ngrok-oper
 
 ![ngrok](/images/localhost02.png)
 
-It's pretty simple to use, steps are,
+It's pretty simple to use. Steps:
  1. Create an [Ngrok free account](https://dashboard.ngrok.com/signup)
  1. [Install the operator](https://ngrok.com/docs/getting-started/kubernetes/?k8s-install=ingress#step-1-install-kubernetes-operator)
  1. Deploy whatever you want to expose - Example, [Podinfo](https://github.com/stefanprodan/podinfo)
@@ -59,7 +58,7 @@ spec:
                   number: 80
 ```
 
-Wait a few seconds and you should have the URL when you describe the ingress you just created
+Wait a few seconds and the URL shows up when you check the ingress:
 
 ```bash
 kubectl get ing -A

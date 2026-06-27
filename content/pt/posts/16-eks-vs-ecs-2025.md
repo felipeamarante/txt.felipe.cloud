@@ -14,13 +14,13 @@ menu = "main"
 
 ### "Estamos migrando para containers, mas devemos usar ECS ou EKS?"
 
-Esta é a pergunta que me fizeram pelo menos cem vezes no último ano. E em 2025, com ambos os serviços mais maduros do que nunca, a resposta não é tão simples quanto alguns posts de blog sugerem.
+Essa pergunta me fizeram pelo menos cem vezes no último ano. Em 2025, com os dois serviços bem maduros, a resposta não é tão simples quanto alguns posts de blog sugerem.
 
-Depois de ajudar dezenas de empresas a tomar essa decisão (e às vezes revertê-la), desenvolvi uma perspectiva mais detalhada que vai além da simplificação usual de "ECS é mais simples, EKS é mais poderoso".
+Depois de ajudar dezenas de empresas a tomar essa decisão (e às vezes revertê-la), tenho uma perspectiva mais detalhada do que o usual "ECS é mais simples, EKS é mais poderoso".
 
 ### O estado dos serviços de containers da AWS em 2025
 
-Primeiro, vamos reconhecer o quanto ambos os serviços evoluíram:
+Os dois evoluíram bastante:
 
 **Amazon ECS (Elastic Container Service)**
 - Service discovery e integração com mesh aprimorados
@@ -29,48 +29,46 @@ Primeiro, vamos reconhecer o quanto ambos os serviços evoluíram:
 - Configuração de rede simplificada
 
 **Amazon EKS (Elastic Kubernetes Service)**
-- Experiência de gerenciamento dramaticamente simplificada
+- Gerenciamento muito menos doloroso que alguns anos atrás
 - Integrações nativas com serviços AWS amadureceram
-- Redução da sobrecarga operacional com EKS Anywhere e EKS Distro
+- Menos overhead operacional com EKS Anywhere e EKS Distro
 - Melhores ferramentas de otimização de custos
 
-A diferença entre eles diminuiu significativamente, tornando a decisão mais complexa do que nunca.
+A diferença entre eles diminuiu bastante, o que paradoxalmente torna a escolha mais difícil.
 
-### Além do marketing: No que cada serviço é REALMENTE bom
+### Além do marketing: no que cada serviço é REALMENTE bom
 
-Vamos deixar o marketing de lado e focar no que cada serviço realmente se destaca em 2025:
-
-#### Pontos Fortes do ECS
+#### Pontos fortes do ECS
 
 1. **Integração nativa com AWS**
-   O ECS continua imbatível na profundidade de integração com outros serviços AWS. Só a integração com CloudWatch economiza horas de trabalho operacional em comparação com o EKS.
+   O ECS ainda ganha fácil na profundidade de integração com outros serviços AWS. Só a integração com CloudWatch economiza horas de trabalho operacional comparado ao EKS.
 
 2. **Simplicidade operacional**
-   Apesar das melhorias no EKS, o ECS ainda requer significativamente menos conhecimento operacional e tem menos componentes móveis.
+   Apesar das melhorias no EKS, o ECS requer bem menos conhecimento operacional e tem menos partes móveis.
 
-3. **Eficiência de custo para implantações menores**
-   Para cargas de trabalho menores, o ECS é tipicamente 15-30% menos caro quando você considera todos os custos.
+3. **Custo para implantações menores**
+   Para cargas de trabalho menores, o ECS fica tipicamente 15-30% mais barato quando você soma tudo.
 
-4. **Implantação serverless de containers**
-   O Fargate no ECS continua mais maduro e completo em recursos do que o Fargate no EKS.
+4. **Fargate**
+   O Fargate no ECS está mais maduro e completo em recursos do que o Fargate no EKS.
 
-#### Pontos Fortes do EKS
+#### Pontos fortes do EKS
 
 1. **Portabilidade de cargas de trabalho**
-   Implantações verdadeiramente multi-cloud e híbridas são práticas com o EKS, especialmente com o EKS Anywhere e compatibilidade com outros serviços gerenciados de Kubernetes como GKE (Google Kubernetes Engine), AKS (Azure Kubernetes Service) e DOKS (DigitalOcean Kubernetes). Isso permite uma implantação consistente de cargas de trabalho em vários provedores de nuvem.
+   Implantações multi-cloud e híbridas de verdade funcionam com o EKS, especialmente com o EKS Anywhere e compatibilidade com GKE (Google Kubernetes Engine), AKS (Azure Kubernetes Service) e DOKS (DigitalOcean Kubernetes). As cargas de trabalho rodam de forma consistente independente de qual nuvem está por baixo.
 
 2. **Ecossistema e ferramentas**
-   O ecossistema Kubernetes continua muito maior do que o disponível para ferramentas específicas do ECS.
+   O ecossistema Kubernetes continua bem maior do que o disponível para ferramentas específicas do ECS.
 
 3. **Agendamento e posicionamento avançados**
-   Agendamento complexo de cargas de trabalho, regras de afinidade/anti-afinidade e acesso a hardware especializado são mais sofisticados.
+   Agendamento complexo, regras de afinidade/anti-afinidade e acesso a hardware especializado são mais sofisticados.
 
-4. **Conjunto de habilidades padronizado**
-   Habilidades em Kubernetes são transferíveis entre nuvens e ambientes on-premises, enquanto o conhecimento em ECS é específico da AWS.
+4. **Habilidades transferíveis**
+   Kubernetes roda em qualquer nuvem. ECS é AWS. Simples assim.
 
-### Framework de decisão do mundo real: Os seis fatores que realmente importam
+### Framework de decisão: os seis fatores que realmente importam
 
-Após dezenas de projetos de migração de containers, descobri que estes seis fatores determinam qual serviço é mais adequado:
+Depois de dezenas de projetos de migração, estes seis fatores determinam qual serviço faz mais sentido:
 
 #### 1. Expertise da equipe em Kubernetes
 
@@ -79,7 +77,7 @@ Baixa expertise → ECS
 Alta expertise → EKS
 ```
 
-Apesar do que alguns dizem, Kubernetes ainda tem uma curva de aprendizado mais íngreme. Se sua equipe já conhece bem o Kubernetes, este fator empurra fortemente para o EKS. Caso contrário, o investimento em treinamento deve ser justificado por outros fatores.
+Kubernetes ainda tem uma curva de aprendizado real. Se sua equipe já conhece bem o Kubernetes, esse fator empurra fortemente para o EKS. Caso contrário, o investimento em treinamento precisa ser justificado por outros fatores.
 
 #### 2. Estratégia multi-cloud
 
@@ -88,7 +86,7 @@ Estratégia apenas AWS → ECS
 Estratégia multi-cloud → EKS
 ```
 
-Se você está comprometido com a AWS a longo prazo, a integração profunda do ECS com a AWS é uma grande vantagem. Se você precisa diversificar provedores de nuvem ou manter capacidades on-premises, o EKS oferece melhor portabilidade. Com o EKS, suas equipes podem usar as mesmas ferramentas e processos na AWS, GCP (GKE), Azure (AKS) e outros provedores Kubernetes, criando uma experiência consistente independentemente da nuvem subjacente.
+Se você está comprometido com a AWS a longo prazo, a integração profunda do ECS é uma vantagem real. Se precisa diversificar provedores ou manter capacidades on-premises, o EKS oferece melhor portabilidade. Com o EKS, as mesmas ferramentas e processos funcionam na AWS, GCP (GKE), Azure (AKS) e outros provedores Kubernetes.
 
 #### 3. Recursos operacionais
 
@@ -97,7 +95,7 @@ Recursos DevOps limitados → ECS
 Equipe DevOps forte → Ambos funcionam bem
 ```
 
-Em 2025, o EKS ainda requer mais sobrecarga operacional apesar das melhorias da AWS. Organizações com recursos DevOps limitados frequentemente lutam com a complexidade do EKS.
+Em 2025, o EKS ainda exige mais overhead operacional apesar das melhorias da AWS. Organizações com DevOps enxuto costumam lutar com a complexidade do EKS.
 
 #### 4. Complexidade da aplicação
 
@@ -106,7 +104,7 @@ Apps containerizados simples → ECS
 Requisitos de implantação complexos → EKS
 ```
 
-Aplicações com padrões de implantação simples funcionam maravilhosamente no ECS. Quando você precisa de recursos avançados como implantações canário, regras complexas de afinidade ou agendamento especializado, o EKS oferece mais capacidades integradas.
+Aplicações com padrões de implantação simples ficam bem no ECS. Quando você precisa de implantações canário, regras complexas de afinidade ou agendamento especializado, o EKS tem mais recursos nativos.
 
 #### 5. Requisitos de escala
 
@@ -115,7 +113,7 @@ Escala pequena a média → Ambos funcionam bem
 Escala massiva (1000+ containers) → Vantagem para o EKS
 ```
 
-Em escala massiva, as capacidades avançadas de agendamento e empacotamento do Kubernetes dão uma ligeira vantagem, embora o ECS tenha reduzido significativamente essa diferença.
+Em escala muito grande, as capacidades de agendamento do Kubernetes dão uma vantagem, mas o ECS reduziu bastante essa diferença.
 
 #### 6. Profundidade de integração com serviços AWS
 
@@ -124,87 +122,47 @@ Forte integração com serviços AWS → ECS
 Dependências mínimas de serviços AWS → Ambos funcionam bem
 ```
 
-Se sua arquitetura utiliza muitos serviços AWS, as integrações nativas do ECS reduzem o código de integração que você precisa manter.
+Se sua arquitetura usa muitos serviços AWS, as integrações nativas do ECS reduzem o código de integração que você precisa manter.
 
-### Estudos de caso do mundo real: Quem escolheu o quê e por quê
+### Casos reais: quem escolheu o quê e por quê
 
-Vamos olhar para empresas reais (nomes alterados) que tomaram essas decisões no último ano:
+Algumas empresas reais (nomes alterados) que tomaram essas decisões no último ano:
 
-#### Estudo de Caso 1: Startup FinTech (Escolheu ECS)
+#### Caso 1: Startup FinTech (escolheu ECS)
 
-**Perfil da empresa:**
-- Equipe de engenharia de 30 pessoas
-- Expertise limitada em Kubernetes
-- Fortemente integrada com serviços AWS
-- Precisava avançar rapidamente com recursos DevOps limitados
+Equipe de 30 engenheiros, pouca experiência com Kubernetes, fortemente integrada com serviços AWS e com recursos DevOps limitados. Os fatores decisivos foram a simplicidade operacional, integração com AWS e custo.
 
-**Fatores decisivos:**
-- Simplicidade operacional
-- Integração profunda com serviços AWS
-- Eficiência de custo
+Resultado: mais de 50 microsserviços no ECS com Fargate, 99,99% de uptime com apenas um engenheiro DevOps em tempo parcial. Estimaram $180.000 de economia em custos operacionais anuais comparado a uma implantação EKS.
 
-**Resultado:**
-Implantou mais de 50 microsserviços no ECS com Fargate, alcançando 99,99% de uptime com apenas um engenheiro DevOps em tempo parcial. Estimaram uma economia de $180.000 em custos operacionais anuais em comparação com uma implantação EKS.
+#### Caso 2: Provedor de SaaS Empresarial (escolheu EKS)
 
-#### Estudo de Caso 2: Provedor de SaaS Empresarial (Escolheu EKS)
+Mais de 200 engenheiros em várias equipes, experiência existente em Kubernetes, estratégia multi-cloud e requisitos complexos de implantação. O que decidiu: portabilidade entre AWS e GCP, padrões avançados de implantação e o investimento já feito em ferramentas Kubernetes.
 
-**Perfil da empresa:**
-- Mais de 200 engenheiros em várias equipes
-- Expertise existente em Kubernetes
-- Estratégia multi-cloud
-- Requisitos complexos de implantação
+Resultado: plataforma rodando na AWS (EKS), GCP (GKE) e Azure (AKS) com manifestos e ferramentas consistentes. Tempo de lançamento de novos recursos caiu 40%. Os mesmos pipelines de CI/CD funcionando nas três nuvens foi o que mais valorizaram.
 
-**Fatores decisivos:**
-- Portabilidade de cargas de trabalho entre AWS e GCP
-- Padrões avançados de implantação
-- Investimento existente em ferramentas Kubernetes
+#### Caso 3: Plataforma de E-commerce (migrou de EKS para ECS)
 
-**Resultado:**
-Implantou com sucesso uma plataforma de aplicações complexa na AWS (EKS), GCP (GKE) e Azure (AKS) usando manifestos Kubernetes e ferramentas consistentes. Alcançou processos de implantação uniformes em todas as três nuvens e reduziu o tempo de lançamento de novos recursos em 40%. A capacidade de usar os mesmos pipelines de CI/CD e ferramentas operacionais em todas as nuvens foi citada como uma grande vantagem.
+Equipe de 50 engenheiros que escolheu EKS baseada no hype, lutou com a complexidade do Kubernetes e percebeu que não tinha requisito real de multi-cloud.
 
-#### Estudo de Caso 3: Plataforma de E-commerce (Migrou de EKS para ECS)
+Resultado: após migrar para o ECS, incidentes operacionais caíram 60% e custos de infraestrutura de containers caíram 25%. A equipe ficou mais satisfeita e entregou recursos mais rápido.
 
-**Perfil da empresa:**
-- Equipe de engenharia de 50 pessoas
-- Inicialmente escolheu EKS baseado no hype
-- Lutou com a complexidade do Kubernetes
-- Comprometida com AWS sem requisitos multi-cloud
+#### Caso 4: Empresa de análise de saúde (migrou de ECS para EKS)
 
-**Fatores decisivos:**
-- Sobrecarga operacional era muito alta
-- Sem necessidade real dos recursos do Kubernetes
-- Integração com serviços AWS era complicada
+Equipe de 80 pessoas entre ciência de dados e engenharia, que cresceu além das capacidades do ECS e precisava de agendamento especializado para cargas de trabalho de ML. Além disso, foi adquirida por uma empresa maior que já padronizou em Kubernetes.
 
-**Resultado:**
-Após migrar para o ECS, reduziu incidentes operacionais em 60% e diminuiu os custos de infraestrutura de containers em 25%. A equipe relatou maior satisfação e entrega mais rápida de recursos.
+Resultado: migrou para o EKS, passou a usar instâncias GPU de forma mais eficiente e padronizou com a infraestrutura da empresa-mãe. A queda de produtividade durante a migração foi recuperada em um trimestre.
 
-#### Estudo de Caso 4: Empresa de Análise de Saúde (Migrou de ECS para EKS)
+### Os fatores que ninguém comenta: o lado humano do ECS vs EKS
 
-**Perfil da empresa:**
-- Equipe de ciência de dados e engenharia de 80 pessoas
-- Superou as capacidades do ECS
-- Precisava de agendamento especializado de hardware para cargas de trabalho de ML
-- Adquirida por empresa maior com padrão Kubernetes
-
-**Fatores decisivos:**
-- Agendamento avançado para cargas de trabalho com GPU
-- Padronização corporativa no Kubernetes
-- Necessidade de padrões de implantação mais sofisticados
-
-**Resultado:**
-Migrou com sucesso para o EKS, permitindo uso mais eficiente de instâncias GPU e padronizando com a infraestrutura da empresa-mãe. A queda inicial de produtividade durante a migração foi recuperada em um trimestre.
-
-### Os fatores ocultos: O que ninguém te conta sobre ECS vs EKS
-
-Além das comparações técnicas, estes fatores "soft" frequentemente determinam o sucesso:
+Além das comparações técnicas, estes fatores "soft" costumam determinar o sucesso:
 
 #### 1. O entusiasmo da equipe importa
 
-Engenheiros que estão entusiasmados com a tecnologia que estão usando são mais produtivos. Se sua equipe é apaixonada por Kubernetes, forçar o ECS pode prejudicar o moral e a produtividade.
+Engenheiros motivados são mais produtivos. Se sua equipe quer usar Kubernetes, forçar o ECS pode custar mais em moral e produtividade do que a diferença de custo operacional.
 
 #### 2. Implicações para recrutamento
 
-Sua escolha afeta quem você pode contratar:
+Sua escolha afeta quem você consegue contratar:
 
 ```
 ECS: Pool menor de candidatos, mas focados em AWS
@@ -213,15 +171,15 @@ EKS: Pool maior de candidatos com experiência em Kubernetes
 
 #### 3. A armadilha do "desenvolvimento orientado ao currículo"
 
-Tenha cuidado ao escolher Kubernetes apenas porque os engenheiros querem isso em seus currículos. Isso acontece com mais frequência do que a maioria das empresas admite.
+Cuidado com escolher Kubernetes porque os engenheiros querem isso no currículo. Acontece com mais frequência do que as empresas admitem.
 
-#### 4. O verdadeiro custo das operações
+#### 4. O custo real das operações
 
-O EKS tipicamente requer 1,5-2x mais recursos operacionais que o ECS, mesmo em 2025. Este custo frequentemente não aparece nas comparações iniciais.
+O EKS tipicamente precisa de 1,5-2x mais recursos operacionais que o ECS, mesmo em 2025. Esse custo raramente aparece nas comparações iniciais.
 
-### Comparação de custos: Os números que ninguém mais mostra
+### Comparação de custos: os números que ninguém mostra
 
-A maioria das comparações foca apenas nos custos diretos do serviço, mas o quadro real de custos é mais complexo:
+A maioria das comparações foca só nos custos diretos do serviço. O quadro real é mais amplo:
 
 ```
 Fator de Custo                  | ECS                        | EKS
@@ -240,11 +198,11 @@ Custo anual total do ECS: ~$120.000
 Custo anual total do EKS: ~$160.000
 ```
 
-A diferença está principalmente nos custos operacionais, não nas cobranças diretas da AWS.
+A diferença vem principalmente dos custos operacionais, não das cobranças diretas da AWS.
 
-### Comparação de desempenho: Benchmarks de 2025
+### Comparação de desempenho: benchmarks de 2025
 
-Benchmarks recentes mostram que a diferença de desempenho diminuiu significativamente:
+Os benchmarks recentes mostram que a diferença de desempenho diminuiu bastante:
 
 ```
 Métrica                           | ECS             | EKS
@@ -255,21 +213,21 @@ Tempo de reação do autoscaling    | 10-30 segundos  | 15-45 segundos
 Latência da API do plano de controle | Muito baixa   | Baixa
 ```
 
-Na maioria dos cenários do mundo real, as diferenças de desempenho são negligenciáveis.
+Na maioria dos cenários reais, as diferenças de desempenho são negligenciáveis.
 
-### A tendência de convergência: ECS se tornando mais parecido com Kubernetes
+### A tendência de convergência: ECS ficando mais parecido com Kubernetes
 
-Uma tendência interessante em 2025 é como o ECS adotou mais recursos semelhantes ao Kubernetes:
+Uma coisa interessante em 2025 é como o ECS foi adotando mais recursos parecidos com Kubernetes:
 
 - O ECS agora suporta um subconjunto de construções semelhantes a Pods
-- As definições de tarefas se tornaram mais semelhantes aos manifestos Kubernetes
+- As definições de tarefas ficaram mais parecidas com manifestos Kubernetes
 - A AWS adicionou mais capacidades de agendamento inspiradas no Kubernetes
 
-Esta convergência significa que a diferença funcional continua diminuindo, tornando a decisão mais sobre ecossistema e modelo operacional do que diferenças de recursos.
+A diferença funcional continua diminuindo. A decisão virou mais sobre ecossistema e modelo operacional do que diferenças de recursos.
 
-### Quando usar ambos: A abordagem híbrida
+### Quando usar ambos: a abordagem híbrida
 
-Algumas organizações estão usando com sucesso ambos os serviços para diferentes cargas de trabalho:
+Algumas organizações estão usando os dois para cargas de trabalho diferentes:
 
 ```
 ECS para:
@@ -283,11 +241,11 @@ EKS para:
 - Equipes com forte preferência por Kubernetes
 ```
 
-Esta abordagem pragmática aproveita os pontos fortes de cada plataforma.
+Faz sentido usar cada um onde é mais forte.
 
-### Caminhos de migração: E se você escolher errado?
+### Caminhos de migração: e se você escolher errado?
 
-Uma preocupação comum é ficar preso à escolha errada. Aqui está a realidade dos custos de migração:
+Uma preocupação comum é ficar preso à escolha errada. A realidade:
 
 **ECS para EKS:**
 - Esforço moderado
@@ -295,15 +253,15 @@ Uma preocupação comum é ficar preso à escolha errada. Aqui está a realidade
 - Conversão de CloudFormation/CDK para manifestos Kubernetes
 
 **EKS para ECS:**
-- Mais desafiador
-- Pode requerer mudanças de arquitetura
+- Mais trabalhoso
+- Pode exigir mudanças de arquitetura
 - Recursos específicos do Kubernetes precisam de alternativas
 
-A chave é projetar suas aplicações para minimizar dependências específicas do orquestrador.
+Projetar as aplicações para minimizar dependências específicas do orquestrador ajuda em qualquer direção.
 
-### Perspectivas futuras: Para onde ambos os serviços estão indo
+### Para onde os serviços estão indo
 
-Com base nos investimentos recentes da AWS e tendências da indústria, aqui está para onde vejo ambos os serviços indo:
+Baseado nos investimentos recentes da AWS e no que vejo na indústria:
 
 **ECS em 2026-2027:**
 - Integrações ainda mais profundas com serviços AWS
@@ -314,55 +272,55 @@ Com base nos investimentos recentes da AWS e tendências da indústria, aqui est
 **EKS em 2026-2027:**
 - Simplificação operacional contínua
 - Melhores integrações com serviços AWS
-- Capacidades aprimoradas do EKS Anywhere e gerenciamento multi-cloud
-- Integração mais profunda com outros serviços gerenciados de Kubernetes (GKE, AKS, DOKS)
+- Capacidades do EKS Anywhere e gerenciamento multi-cloud
+- Integração mais profunda com GKE, AKS e DOKS
 - Otimização de custos mais sofisticada
-- Experiência de desenvolvedor aprimorada para reduzir a curva de aprendizado do Kubernetes
+- Experiência de desenvolvedor melhorada para reduzir a curva de aprendizado do Kubernetes
 
-A diferença continuará diminuindo, mas os trade-offs fundamentais permanecerão.
+A diferença vai continuar diminuindo, mas os trade-offs fundamentais vão ficar.
 
-### Tomando a decisão: Uma abordagem prática
+### Tomando a decisão: uma abordagem prática
 
-Se você está enfrentando esta decisão, aqui está minha abordagem recomendada:
+Se você está enfrentando essa decisão:
 
 1. **Seja honesto sobre a expertise da sua equipe em Kubernetes**
    Não subestime a curva de aprendizado se sua equipe é nova no Kubernetes.
 
 2. **Avalie seus verdadeiros requisitos multi-cloud**
-   Muitas organizações alegam necessidades multi-cloud, mas não as têm realmente.
+   Muitas organizações acham que precisam de multi-cloud, mas na prática não precisam.
 
 3. **Liste seus requisitos específicos de orquestração**
-   Crie uma lista detalhada do que você realmente precisa, não do que seria bom ter.
+   O que você realmente precisa, não o que seria legal ter.
 
 4. **Calcule o custo total de propriedade**
-   Inclua custos operacionais, não apenas cobranças diretas da AWS.
+   Inclua custos operacionais, não só as cobranças diretas da AWS.
 
-5. **Considere começar com ECS e evoluir se necessário**
+5. **Considere começar com ECS**
    Para muitas organizações, começar com ECS e migrar para EKS se necessário é menos arriscado que o contrário.
 
-### O veredicto: Ainda não existe solução única para todos
+### O veredicto: ainda não existe solução única
 
-Após toda esta análise, a resposta continua sendo: depende da sua situação específica.
+Depois de tudo isso, a resposta continua sendo: depende da sua situação.
 
-Mas em 2025, estes padrões emergiram:
+Em 2025, estes padrões ficaram claros:
 
 - **ECS é a melhor escolha padrão** para equipes focadas em AWS sem requisitos específicos de Kubernetes
-- **EKS é a melhor escolha padrão** para equipes com expertise existente em Kubernetes ou requisitos multi-cloud
-- **Ambos os serviços estão prontos para produção** e podem escalar para atender necessidades empresariais
+- **EKS é a melhor escolha padrão** para equipes com expertise em Kubernetes ou requisitos multi-cloud
+- **Os dois serviços estão prontos para produção** e escalam para necessidades empresariais
 
-A boa notícia é que ambos os serviços continuam melhorando rapidamente, então nenhuma escolha está errada. São apenas diferentes trade-offs para diferentes contextos.
+Nenhuma escolha está errada. São trade-offs diferentes para contextos diferentes.
 
 ### Junte-se a mim no AWS Community Day Lisboa 2025
 
-No AWS Community Day Lisboa, vou aprofundar estas escolhas de orquestração de containers com:
+No AWS Community Day Lisboa, vou aprofundar essas escolhas de orquestração de containers com:
 
 - Comparações detalhadas de arquitetura
-- Benchmarks de desempenho de implantações do mundo real
+- Benchmarks de desempenho de implantações reais
 - Estratégias de migração entre os serviços
-- Técnicas de otimização de custos para ambas as plataformas
+- Técnicas de otimização de custos para as duas plataformas
 - Estratégias multi-cloud usando EKS com GKE, AKS e outros serviços Kubernetes
-- Frameworks práticos de decisão para seus casos de uso específicos
+- Frameworks práticos de decisão para seus casos de uso
 
-Seja você está apenas começando com containers ou procurando otimizar sua implantação existente, entender estes trade-offs ajudará você a tomar melhores decisões arquitetônicas.
+Se você está começando com containers ou quer otimizar o que já tem, entender esses trade-offs ajuda a tomar decisões melhores.
 
 Vejo você em Lisboa!

@@ -17,11 +17,11 @@ menu = "main"
 
 We've all been there: provisioning a new VM for each application, waiting 10+ minutes for it to boot, then spending hours configuring the OS, installing dependencies, and troubleshooting conflicts. And don't get me started on patching and maintenance.
 
-### The Engineer-to-Resource Ratio Revolution
+### The engineer-to-resource ratio
 
 Here's a stat that should make you rethink your infrastructure: while a typical operations engineer can manage around 100-200 virtual machines, that same engineer can handle 10,000+ containers.
 
-That's not a typo: it's a 50-100x efficiency improvement.
+That's not a typo. That's a 50-100x efficiency improvement.
 
 ```
 # Traditional VM world
@@ -31,18 +31,18 @@ That's not a typo: it's a 50-100x efficiency improvement.
 1 engineer : ~10,000 containers
 ```
 
-### Why such a dramatic difference?
+### Why such a big difference?
 
-Containers eliminate entire categories of work that plague VM management:
+Containers eliminate entire categories of work that come with VM management:
 
-- **OS management**: No more patching 100 different OS instances
-- **Immutability**: No configuration drift or snowflake servers
-- **Standardization**: Same deployment process for everything
-- **Orchestration**: Platforms like Kubernetes handle scheduling, scaling, and healing
+- No more patching 100 different OS instances
+- No configuration drift or snowflake servers
+- Same deployment process for everything
+- Platforms like Kubernetes handle scheduling, scaling, and healing automatically
 
-### Real-world success: Expedia's transformation
+### Expedia's migration
 
-Expedia Group migrated their monolithic VM-based architecture to containers and saw dramatic improvements:
+Expedia Group moved their monolithic VM-based architecture to containers:
 
 ```
 BEFORE (VMs):
@@ -56,11 +56,11 @@ AFTER (Containers):
 - 70% of time spent on innovation
 ```
 
-The most impressive part? They reduced their infrastructure costs by 58% while handling 20% more traffic.
+They cut infrastructure costs by 58% while handling 20% more traffic. With a third of the team.
 
-### Another case study: Capital One's container journey
+### Capital One did similar math
 
-Capital One's migration to containers yielded similarly impressive results:
+Capital One's migration to containers:
 
 ```
 - 40% reduction in infrastructure costs
@@ -69,17 +69,9 @@ Capital One's migration to containers yielded similarly impressive results:
 - Engineer productivity increased by 300%
 ```
 
-It's much better to focus on productivity and innovation than maintenance, right?
+Engineers went from keeping things running to shipping new things. That tends to be the real win.
 
-### The cost implications are staggering
-
-Let's break down the economics:
-
-1. **Infrastructure costs**: Containers achieve 2-3x higher resource utilization through denser packing and faster scaling
-
-2. **Personnel costs**: When engineers can manage 50x more resources, you need fewer engineers (or the same team can deliver much more)
-
-3. **Opportunity costs**: Faster deployments mean features reach customers sooner, creating competitive advantage
+### What it costs
 
 A mid-sized company running 500 VMs might spend:
 ```
@@ -93,15 +85,17 @@ Infrastructure: $15,000/month (57% savings)
 Personnel: 2 engineers = $300,000/year (60% savings)
 ```
 
-That's over $600,000 in annual savings, before accounting for the business value of faster deployments.
+That's over $600,000 in annual savings, before you count the business value of faster deployments.
 
-### Making the transition: Start small, think big
+Three things are happening at once: containers pack workloads more densely (2-3x better utilization), fewer engineers can manage more resources, and faster deployments mean features reach users sooner. All three go in the right direction.
 
-The good news? You don't need to containerize everything overnight. Start with these steps:
+### Making the transition
 
-1. **Pick a non-critical stateless service** for your first containerization project
+You don't need to containerize everything overnight. Start here:
 
-2. **Build a container image** from your application:
+1. Pick a non-critical stateless service for your first containerization project
+
+2. Build a container image from your application:
    ```bash
    # Simple Dockerfile for a Node.js app
    FROM node:18-alpine
@@ -112,23 +106,16 @@ The good news? You don't need to containerize everything overnight. Start with t
    CMD ["npm", "start"]
    ```
 
-3. **Deploy to a managed container service** like AWS ECS, Azure Container Apps, or Google Cloud Run if you're not ready for full Kubernetes
+3. Deploy to a managed container service like AWS ECS, Azure Container Apps, or Google Cloud Run if you're not ready for full Kubernetes
 
-### The hidden benefit: Better security
+### Security benefits
 
-Containers don't just improve efficiency. They can dramatically improve your security posture:
+Containers don't just improve efficiency. They can clean up your security posture too:
 
-- Immutable infrastructure eliminates configuration drift
+- Immutable infrastructure means no configuration drift to exploit
 - Smaller attack surface with minimal OS components
 - Automated scanning in CI/CD pipelines
 
-### No more excuses for sticking with VMs
+### So, is it worth it?
 
-With containers, you get:
-- Dramatically improved resource utilization
-- Significantly reduced operational overhead
-- Faster deployments and time to market
-- Better security through immutability
-- Massive cost savings on both infrastructure and personnel
-
-The question isn't whether you should containerize. It's why haven't you started already?
+Better resource utilization, less operational overhead, faster deployments, lower infrastructure spend, and fewer engineers needed to manage it all. Pick a stateless service you don't care too much about, containerize it, and see what your numbers look like.

@@ -16,11 +16,11 @@ menu = "main"
 
 ![local ai](/images/local-ai.gif)
 
-Todos já passamos por isso: atingindo limites de taxa na API da OpenAI, preocupados com código sensível sendo enviado para algum servidor distante, ou tentando programar em um avião com Wi-Fi instável. E se você pudesse executar modelos de IA poderosos diretamente no seu laptop, completamente offline?
+Já bati no limite de taxa da OpenAI no meio de uma sessão de debug. Já evitei usar IA em projetos porque o código não podia sair da empresa. Com o Ollama você roda LLMs direto na sua máquina: sem conta na nuvem, sem chave de API, sem limite de uso.
 
-### Conheça o Ollama: LLMs Locais de Forma Ridiculamente Simples
+### Ollama: LLMs locais com configuração mínima
 
-O Ollama permite executar grandes modelos de linguagem localmente com configuração mínima. Sem contas na nuvem, sem chaves de API, sem limites de uso.
+O Ollama permite executar grandes modelos de linguagem localmente. Sem dependências externas, sem surpresas na fatura.
 
 ```bash
 # Instale
@@ -40,11 +40,11 @@ ollama pull llama2
 ollama run llama2
 ```
 
-É isso. Você agora está executando um poderoso LLM completamente offline.
+É isso. Você agora está executando um LLM completamente offline.
 
-### Escolha o modelo certo para suas necessidades
+### Escolha o modelo certo para a tarefa
 
-Diferentes tarefas precisam de diferentes modelos. Aqui está minha tabela de referência:
+Diferentes tarefas precisam de diferentes modelos. Minha tabela de referência:
 
 ```bash
 # Para ajuda com programação (6.7B parâmetros, rápido na maioria dos laptops)
@@ -62,7 +62,7 @@ ollama pull tinyllama
 
 ### Integre com seu fluxo de trabalho
 
-A verdadeira mágica acontece quando você integra o Ollama às suas ferramentas de desenvolvimento:
+Algumas formas práticas de encaixar o Ollama nas suas ferramentas de desenvolvimento:
 
 **VS Code**: Instale a extensão "Continue" e aponte para seu endpoint Ollama local.
 
@@ -103,11 +103,11 @@ for FILE in $STAGED_FILES; do
 done
 ```
 
-### Dicas de desempenho que realmente funcionam
+### Dicas de desempenho
 
-Executar LLMs localmente pode consumir muitos recursos, mas estas dicas fazem uma grande diferença:
+LLMs locais consomem bastante recurso. Estas opções ajudam:
 
-1. **Modelos quantizados**: Use versões quantizadas de 4 bits para um aumento de 2-3x na velocidade
+1. **Modelos quantizados**: Use versões quantizadas de 4 bits para um ganho de 2-3x na velocidade
    ```bash
    ollama pull codellama:7b-q4_0
    ```
@@ -125,15 +125,15 @@ Executar LLMs localmente pode consumir muitos recursos, mas estas dicas fazem um
    ollama rm modelo-nao-usado
    ```
 
-### O caso de uso do mundo real
+### Um caso de uso real
 
 Na semana passada, eu estava trabalhando em um projeto de cliente com requisitos de segurança rigorosos: nenhum código poderia sair da rede deles. Com o Ollama rodando localmente, eu ainda conseguia obter assistência de IA para depurar um fluxo de autenticação complexo sem violar nenhuma política.
 
 O modelo me ajudou a identificar uma condição de corrida na lógica de atualização de token que teria levado horas para encontrar manualmente. Tudo isso sem enviar uma única linha de código para uma API externa.
 
-### Além do básico: Crie seus próprios modelos personalizados
+### Criando modelos personalizados
 
-O recurso mais poderoso é criar modelos personalizados adaptados às suas necessidades:
+Você também pode criar modelos adaptados ao seu contexto:
 
 ```
 FROM llama2
@@ -151,14 +151,4 @@ ollama create aws-assistant -f Modelfile
 ollama run aws-assistant
 ```
 
-Agora você tem um assistente de IA especializado em AWS, rodando completamente offline.
-
-### Sem mais desculpas para não usar IA no seu fluxo de trabalho
-
-Com o Ollama, você obtém:
-- Privacidade completa
-- Sem custos de API
-- Acesso offline
-- Modelos personalizáveis
-
-A melhor parte? É tudo open source. Experimente e me conte como isso transforma seu fluxo de trabalho de desenvolvimento!
+Agora você tem um modelo focado em AWS, rodando offline. É open source, não manda nada pra fora e funciona sem internet. Para projetos com restrição de privacidade, ou só para parar de pagar por token, vale a instalação.

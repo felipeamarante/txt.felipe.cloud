@@ -15,9 +15,9 @@ menu = "main"
 ### So you are following a long tutorial...
 
 And you are getting bloody tired of copying and pasting all the YAMLs... urgh.  
-What if I told you that **I can make your work 50% less painful?** Would you pay me a coffee? ☕
+What if I told you I can make your work 50% less painful? Would you pay me a coffee? ☕
 
-Please refer to the YAML below  
+Here's the YAML:
 
 ```yaml
 apiVersion: v1
@@ -43,7 +43,7 @@ spec:
     coffee-supply: "critical"
 ```
 
-You can simply copy the YAML above and use `pbpaste` to pipe your clipboard through the `kubectl apply` with the command below:
+Copy it, then pipe your clipboard straight into kubectl:
 
 ```bash
 pbpaste | k apply -f-

@@ -16,7 +16,7 @@ menu = "main"
 
 ![meme](/images/this-is-fine.gif)
 
-It happened once: I deployed a production stack into the sandbox account and had no idea why it wasn't working... Turning this frustrating experience into something useful, I decided to build a tool that helps me (and potentially you) set a profile or context, similar to [kubectx](https://github.com/ahmetb/kubectx).
+It happened once: I deployed a production stack into the sandbox account and had no idea why it wasn't working. So I built a tool to handle AWS profile switching, similar to [kubectx](https://github.com/ahmetb/kubectx).
 
 It's a simple shell function that you add to your `.bashrc` or `.zshrc`, and it loads whenever you start a new shell session. It's called `awsctx` (yes, very creative).
 
@@ -24,6 +24,6 @@ It's a simple shell function that you add to your `.bashrc` or `.zshrc`, and it 
 
 ### How do I install it?
 
-Please refer to my well-documented README.md in this repo! And don't forget to star it.
+Check the well-documented README.md. And don't forget to star it.
 
 https://github.com/felipeamarante/awsctx

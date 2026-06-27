@@ -15,7 +15,7 @@ menu = "main"
 ### Então você está seguindo um tutorial longo...
 
 E você está ficando completamente cansado de copiar e colar todos os YAMLs... urgh.  
-E se eu te dissesse que **posso tornar seu trabalho 50% menos doloroso?** Você me pagaria um café? ☕
+Tem um jeito melhor. Você me pagaria um café? ☕
 
 Dê uma olhada no YAML abaixo  
 
@@ -42,7 +42,7 @@ spec:
   nodeSelector:
     coffee-supply: "critical"
 ```
-Você pode simplesmente copiar o YAML acima e usar `pbpaste` para enviar seu clipboard diretamente para o `kubectl apply` com o comando abaixo:
+Você pode copiar o YAML acima e usar `pbpaste` para jogar o clipboard direto no `kubectl apply`:
 
 ```bash
 pbpaste | k apply -f-

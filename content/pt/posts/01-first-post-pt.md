@@ -17,16 +17,16 @@ menu = "main"
 
 1. Potencialize-se
 2. Tenha quase autoconfiança demais
-3. Aprenda a pensar de forma independente
-4. Torne-se bom em "vendas"
-5. Facilite a tomada de riscos
+3. Aprenda a pensar por conta própria
+4. Seja bom em "vendas"
+5. Facilite correr riscos
 6. Foque
 7. Trabalhe duro
 8. Seja ousado
 9. Seja determinado
-10. Seja difícil de competir
-11. Construa uma rede de contatos
-12. Enriqueça possuindo coisas
-13. Seja motivado internamente
+10. Seja difícil de superar
+11. Monte sua rede
+12. Fique rico sendo dono de coisas
+13. Seja motivado por dentro
 
 Por Sam Altman  

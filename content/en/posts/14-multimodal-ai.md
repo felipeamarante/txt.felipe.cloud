@@ -34,7 +34,7 @@ Multimodal AI:
 Input: Text + Images + Audio → Model → Output: Text + Images + Audio
 ```
 
-### The four capabilities that make multimodal AI game-changing
+### Four things multimodal AI can actually do
 
 After experimenting with models like GPT-4V, Claude 3, and Gemini, I've found these capabilities most useful:
 
@@ -63,7 +63,7 @@ After experimenting with models like GPT-4V, Claude 3, and Gemini, I've found th
    "Is this UI implementation consistent with the wireframe?"
    ```
 
-### Real-world example: Debugging a React app in 2 minutes instead of 20
+### Real-world example: debugging a React app in 2 minutes instead of 20
 
 Last week, I was struggling with a React component that wasn't rendering properly. After 15 minutes of fruitless debugging, I took a screenshot of both my code and the broken UI, then asked GPT-4V:
 
@@ -73,7 +73,7 @@ In seconds, it spotted the problem: I was destructuring props incorrectly, causi
 
 ### Getting started with multimodal AI today
 
-You don't need special hardware or complex setups. Here's how to use GPT-4 with Vision through the API:
+No special hardware, no complex setup. Here's how to use GPT-4 with Vision through the API:
 
 ```bash
 curl https://api.openai.com/v1/chat/completions \
@@ -93,11 +93,11 @@ curl https://api.openai.com/v1/chat/completions \
   }'
 ```
 
-This simple command lets you send both text and images to the model and get back detailed analysis.
+Send text and an image, get back analysis. That's all it takes.
 
-### Pro tip: Multimodal prompting techniques
+### Prompting multimodal models
 
-The way you prompt multimodal models significantly affects results:
+How you prompt these models makes a real difference:
 
 1. **Be specific about what to look for**:
    ```
@@ -119,9 +119,9 @@ The way you prompt multimodal models significantly affects results:
    3. Recommendations based on the data"
    ```
 
-### The hidden benefit: Accessibility improvements
+### An unexpected use: accessibility
 
-One unexpected benefit I've found is using multimodal AI to improve accessibility:
+One thing I didn't expect to find useful is generating accessibility content:
 
 ```
 # Generate alt text for images
@@ -131,14 +131,10 @@ One unexpected benefit I've found is using multimodal AI to improve accessibilit
 "Describe this architectural diagram in text form that could be read by a screen reader"
 ```
 
-### The future is multimodal
+Not the flashiest use case, but a real one.
 
-As these models continue to improve, we'll see:
+### Where this is going
 
-- Video understanding becoming more sophisticated
-- Real-time analysis of visual data streams
-- More specialized models for domains like medicine and engineering
+Video understanding is the obvious next step, and some of it is already showing up. Models that can analyze recordings or live feeds are coming, mostly for specialized domains like medicine and security right now.
 
-The days of text-only AI are numbered. The most powerful applications will combine multiple modalities, just like humans do.
-
-Whether you're debugging code, analyzing documents, or creating content, multimodal AI offers capabilities that text-only models simply can't match. And the best part? You can start using these tools today.
+For now, the useful habit change is simpler: if you've been copy-pasting error text when you could just screenshot it and ask the model what's wrong, try that first. It saves more time than you'd expect.
