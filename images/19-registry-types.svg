@@ -1,0 +1,59 @@
+<svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One registry catalogs three artifact types: MCP servers, plugins, and product context packs" style="width:100%;height:auto;max-width:620px;display:block;margin:1.6rem auto">
+  <style>
+    text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+    .box{fill:#fff;stroke:#24292e;stroke-width:1.6}
+    .soft{fill:#fff;stroke:#9aa0a6;stroke-width:1.3}
+    .t{fill:#24292e;font-size:14px;font-weight:600}
+    .s{fill:#57606a;font-size:12px}
+    .xs{fill:#57606a;font-size:10px}
+    .n{fill:#57606a;font-size:12px;font-style:italic}
+    .ar{stroke:#24292e;stroke-width:1.6;fill:none}
+  </style>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#24292e"/></marker></defs>
+
+  <rect class="box" x="30" y="14" width="185" height="58" rx="6"/>
+  <text class="t" x="122" y="38" text-anchor="middle">MCP servers</text>
+  <text class="s" x="122" y="57" text-anchor="middle">source lives elsewhere</text>
+
+  <rect class="box" x="228" y="14" width="185" height="58" rx="6"/>
+  <text class="t" x="320" y="38" text-anchor="middle">Plugins (skills)</text>
+  <text class="s" x="320" y="57" text-anchor="middle">installable, in-repo</text>
+
+  <rect class="box" x="426" y="14" width="185" height="58" rx="6"/>
+  <text class="t" x="518" y="38" text-anchor="middle">Product context packs</text>
+  <text class="s" x="518" y="57" text-anchor="middle">nightly repomix bundle</text>
+
+  <rect class="box" x="150" y="150" width="300" height="54" rx="6"/>
+  <text class="t" x="300" y="174" text-anchor="middle">Registry (metadata only)</text>
+  <text class="s" x="300" y="192" text-anchor="middle">a PR adds a manifest</text>
+
+  <rect class="soft" x="468" y="146" width="172" height="72" rx="6"/>
+  <text class="t" x="554" y="170" text-anchor="middle">CODEOWNERS gate</text>
+  <text class="s" x="554" y="189" text-anchor="middle">gates badges.yaml</text>
+  <text class="xs" x="554" y="206" text-anchor="middle">reviewed · recommended · deprecated</text>
+  <line class="ar" x1="450" y1="177" x2="468" y2="177" marker-end="url(#a)"/>
+
+  <line class="ar" x1="122" y1="72" x2="240" y2="148" marker-end="url(#a)"/>
+  <line class="ar" x1="320" y1="72" x2="300" y2="148" marker-end="url(#a)"/>
+  <line class="ar" x1="518" y1="72" x2="360" y2="148" marker-end="url(#a)"/>
+
+  <line class="ar" x1="300" y1="204" x2="300" y2="238" marker-end="url(#a)"/>
+  <text class="s" x="310" y="226" text-anchor="start">build ≈ 90s</text>
+
+  <rect class="box" x="150" y="240" width="300" height="52" rx="6"/>
+  <text class="t" x="300" y="264" text-anchor="middle">Static catalog site</text>
+  <text class="s" x="300" y="282" text-anchor="middle">private GitHub Pages</text>
+
+  <rect class="soft" x="35" y="332" width="175" height="44" rx="6"/>
+  <text class="t" x="122" y="359" text-anchor="middle">Claude Code</text>
+  <rect class="soft" x="232" y="332" width="175" height="44" rx="6"/>
+  <text class="t" x="320" y="359" text-anchor="middle">VS Code / Desktop</text>
+  <rect class="soft" x="430" y="332" width="175" height="44" rx="6"/>
+  <text class="t" x="518" y="359" text-anchor="middle">CI agents</text>
+
+  <line class="ar" x1="300" y1="292" x2="130" y2="330" marker-end="url(#a)"/>
+  <line class="ar" x1="300" y1="292" x2="320" y2="330" marker-end="url(#a)"/>
+  <line class="ar" x1="300" y1="292" x2="510" y2="330" marker-end="url(#a)"/>
+
+  <text class="n" x="320" y="412" text-anchor="middle">one catalog, three artifact types; a PR ships to it in ≈ 90s</text>
+</svg>
