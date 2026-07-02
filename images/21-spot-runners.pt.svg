@@ -1,0 +1,34 @@
+<svg viewBox="0 0 620 336" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Runner self-hosted do GitHub Actions em instancia spot EC2 numa VPC da AWS provisionada por Terraform" style="width:100%;height:auto;max-width:600px;display:block;margin:1.6rem auto">
+  <style>
+    text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+    .box{fill:#fff;stroke:#24292e;stroke-width:1.6}
+    .soft{fill:#fff;stroke:#9aa0a6;stroke-width:1.3}
+    .aws{fill:none;stroke:#9aa0a6;stroke-width:1.3;stroke-dasharray:5 4}
+    .t{fill:#24292e;font-size:15px;font-weight:600}
+    .s{fill:#57606a;font-size:12px}
+    .n{fill:#57606a;font-size:12px;font-style:italic}
+    .ar{stroke:#24292e;stroke-width:1.6;fill:none}
+  </style>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#24292e"/></marker></defs>
+
+  <rect class="box" x="150" y="14" width="320" height="54" rx="6"/>
+  <text class="t" x="310" y="36" text-anchor="middle">Job do GitHub Actions</text>
+  <text class="s" x="310" y="55" text-anchor="middle">um workflow precisa de um runner</text>
+
+  <line class="ar" x1="310" y1="68" x2="310" y2="98" marker-end="url(#a)"/>
+  <text class="s" x="320" y="87" text-anchor="start">pego por</text>
+
+  <rect class="aws" x="80" y="100" width="460" height="88" rx="8"/>
+  <text class="s" x="94" y="120" text-anchor="start">VPC na AWS · provisionada com Terraform</text>
+  <rect class="box" x="150" y="128" width="320" height="52" rx="6"/>
+  <text class="t" x="310" y="150" text-anchor="middle">Runner self-hosted em spot EC2</text>
+  <text class="s" x="310" y="168" text-anchor="middle">ARM64 t4g.nano · preço spot</text>
+
+  <line class="ar" x1="310" y1="188" x2="310" y2="218" marker-end="url(#a)"/>
+  <text class="s" x="320" y="207" text-anchor="start">shell via</text>
+
+  <rect class="soft" x="110" y="220" width="400" height="44" rx="6"/>
+  <text class="t" x="310" y="247" text-anchor="middle">SSM Session Manager (sem chaves SSH)</text>
+
+  <text class="n" x="310" y="300" text-anchor="middle">spot + ARM64 ≈ 70% mais barato que on-demand</text>
+</svg>
